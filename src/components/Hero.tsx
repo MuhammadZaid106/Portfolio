@@ -108,7 +108,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-screen bg-[#050508] flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[100svh] bg-[#050508] flex items-start md:items-center justify-center overflow-hidden pt-24 pb-16 md:py-0"
     >
       {/* Background Parallax Grid Layer */}
       <div
@@ -145,7 +145,7 @@ export default function Hero() {
       {/* Foreground Hero Content */}
       <div
         ref={contentRef}
-        className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center text-center mt-12"
+        className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full flex flex-col items-center text-center mt-0 md:mt-12"
       >
         {/* Status Badge */}
         <div className="mb-6 overflow-hidden">
@@ -153,7 +153,7 @@ export default function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-950/80 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-zinc-300 backdrop-blur-md uppercase mt-10"
+            className="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-950/80 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-zinc-300 backdrop-blur-md uppercase mt-4 md:mt-10"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -164,14 +164,14 @@ export default function Hero() {
         </div>
 
         {/* Oversized Typography Title */}
-        <div ref={titleContainerRef} className="flex flex-col gap-2 md:gap-4 select-none">
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-none text-white overflow-hidden">
+        <div ref={titleContainerRef} className="flex flex-col gap-1.5 md:gap-4 select-none">
+          <h1 className="text-[clamp(1.9rem,8vw,4.5rem)] sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[-0.05em] leading-[0.9] text-white overflow-hidden whitespace-nowrap">
             {splitText("BUILDING REVENUE")}
           </h1>
-          <h2 className="text-4xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-none text-stroke-light overflow-hidden py-1">
+          <h2 className="text-[clamp(1.9rem,8vw,4.5rem)] sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[-0.05em] leading-[0.9] text-stroke-light overflow-hidden py-1 whitespace-nowrap">
             {splitText("COMMERCE ENGINES")}
           </h2>
-          <h3 className="text-3xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none text-zinc-400 overflow-hidden">
+          <h3 className="text-[clamp(1.65rem,7vw,4rem)] sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-[-0.05em] leading-[0.9] text-zinc-400 overflow-hidden whitespace-nowrap">
             {splitText("FOR GLOBAL BRANDS")}
           </h3>
         </div>
@@ -181,7 +181,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="mt-8 text-sm md:text-base text-zinc-400 max-w-xl font-medium tracking-wide leading-relaxed"
+          className="mt-6 md:mt-8 text-sm md:text-base text-zinc-400 max-w-[20rem] sm:max-w-xl font-medium tracking-wide leading-relaxed px-1"
         >
           Engineering sub-second storefront architectures, scalable booking engines, and performance B2B transaction panels that scale client revenue.
         </motion.p>
@@ -191,7 +191,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-10 flex flex-wrap gap-4 justify-center"
+          className="mt-8 md:mt-10 flex flex-wrap gap-4 justify-center"
         >
           <Button
             className="bg-white text-black font-bold text-xs tracking-wider uppercase py-4 px-8 rounded-full shadow-[0_10px_30px_rgba(255,255,255,0.1)] hover:bg-zinc-100 hover:shadow-[0_15px_40px_rgba(255,255,255,0.2)] transition-all flex items-center gap-2 group border-transparent"

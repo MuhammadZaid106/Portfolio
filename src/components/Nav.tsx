@@ -129,7 +129,7 @@ export default function Nav() {
             data-cursor="link"
           >
             <span className={`text-xl font-bold uppercase tracking-widest transition-colors duration-300 ${logoTextClass}`}>
-              A.G
+              Z.N
             </span>
             <span className={`text-[10px] border px-2 py-0.5 rounded-full tracking-wider uppercase font-semibold transition-colors duration-300 ${
               isShrunk ? "bg-[#F7F7F8] text-[#5B5B60] border-[#E5E5E7]" : "bg-zinc-800 text-zinc-400 border-zinc-700"

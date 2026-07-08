@@ -5,7 +5,7 @@ const PRODUCTION_HOST = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname
   : 'localhost';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const host = request.headers.get('host') || '';
   const response = NextResponse.next();
 
@@ -16,6 +16,8 @@ export function middleware(request: NextRequest) {
 
   return response;
 }
+
+export default proxy;
 
 export const config = {
   matcher: '/:path*',

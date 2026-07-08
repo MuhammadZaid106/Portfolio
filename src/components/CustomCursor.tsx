@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "motion/react";
 
 export default function CustomCursor() {
-  const [cursorType, setCursorType] = useState(null);
+  const [cursorType, setCursorType] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(true);
 
@@ -23,15 +23,15 @@ export default function CustomCursor() {
     setIsTouchDevice(touchCheck);
     if (touchCheck) return;
 
-    const moveCursor = (e) => {
+    const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
       setIsVisible(true);
     };
 
-    const handleMouseOver = (e) => {
+    const handleMouseOver = (e: MouseEvent) => {
       const target = e.target;
-      const hoverEl = target.closest("[data-cursor]");
+      const hoverEl = target instanceof Element ? target.closest("[data-cursor]") : null;
       const type = hoverEl ? hoverEl.getAttribute("data-cursor") : null;
       setCursorType(type);
     };

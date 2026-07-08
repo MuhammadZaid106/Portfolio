@@ -41,19 +41,15 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const TwitterIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 24 24"
     width="24"
     height="24"
-    stroke="currentColor"
-    strokeWidth="2"
-    fill="none"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    fill="currentColor"
     {...props}
   >
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.15-4.9-4.34-.14-.19-1.17-1.56-1.17-2.98s.74-2.11 1-2.4c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.27.36-.23.6-.14.24.09 1.53.72 1.79.85.26.14.44.2.5.31.06.11.06.65-.18 1.33z" />
   </svg>
 );
 
@@ -65,10 +61,22 @@ export default function Footer() {
   };
 
   const socials = [
-    { name: "GitHub", href: "https://github.com", icon: GithubIcon },
-    { name: "LinkedIn", href: "https://linkedin.com", icon: LinkedinIcon },
-    { name: "Twitter", href: "https://twitter.com", icon: TwitterIcon },
-    { name: "Email", href: "mailto:hello@example.com", icon: Mail },
+    {
+      name: "GitHub",
+      href: "https://github.com/MuhammadZaid106",
+      icon: GithubIcon,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/zaid-naeem-2a1a79378/",
+      icon: LinkedinIcon,
+    },
+    {
+      name: "WhatsApp",
+      href: "https://wa.me/923294633734?text=Hello%2C%20I%27m%20looking%20for%20a%20professional%20to%20build%2Fhelp%20with%20my%20website.%20Are%20you%20available%3F",
+      icon: WhatsAppIcon,
+    },
+    { name: "Email", href: "mailto:zaidnaeem106@gmail.com", icon: Mail },
   ];
 
   return (
@@ -80,13 +88,17 @@ export default function Footer() {
         {/* Left: Copyright */}
         <div className="flex flex-col gap-2 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2">
-            <span className="text-sm font-bold uppercase tracking-widest text-[#111111]">AG DEV</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-[#111111]">
+              AG DEV
+            </span>
             <span className="text-[9px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-1.5 py-0.5 rounded-full tracking-wider uppercase font-semibold">
               Available for Hire
             </span>
           </div>
           <p className="text-xs text-[#5B5B60] max-w-sm mt-1">
-            © {new Date().getFullYear()} AG Dev. Specialized in engineering high-conversion commerce architectures, sub-second booking platforms, and analytical B2B systems.
+            © {new Date().getFullYear()} AG Dev. Specialized in engineering
+            high-conversion commerce architectures, sub-second booking
+            platforms, and analytical B2B systems.
           </p>
         </div>
 
@@ -124,7 +136,7 @@ export default function Footer() {
           >
             <ArrowUp className="w-5 h-5" />
           </Button>
-          <span className="text-[10px] text-[#5B5B60] uppercase tracking-widest font-semibold mt-1">
+          <span className="text-[10px] text-[#5B5B60] uppercase tracking-widest font-semibold mt-1 ml-4">
             Back to Top
           </span>
         </div>

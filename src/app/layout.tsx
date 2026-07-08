@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import CustomCursor from "@/components/CustomCursor";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "AG Dev | Commerce Engineer & B2B Dashboard Architect",
@@ -44,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased custom-cursor-active`}
+      className="h-full antialiased custom-cursor-active"
     >
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         {/* Animated filmic grain/noise overlay */}
         <div className="noise-overlay" />
         
