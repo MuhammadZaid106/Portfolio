@@ -134,10 +134,10 @@ export default function Contact() {
                 Direct Channels
               </span>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:zaidnaeem106@gmail.com"
                 className="text-sm font-bold text-[#111111] hover:text-orbit transition-colors flex items-center gap-2 group w-max"
               >
-                hello@example.com
+                zaidnaeem106@gmail.com
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 duration-200" />
               </a>
               <span className="text-xs text-[#5B5B60] font-medium">
